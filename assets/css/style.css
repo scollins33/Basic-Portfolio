@@ -1,6 +1,8 @@
-html {
+html, body {
+    height: 100%;
 	color: #777777;
 	background-image: url("../images/seigaiha.png");
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 header {
@@ -8,16 +10,19 @@ header {
 	overflow: auto;
 	clear: both;
 	width: 100%;
-	border-style: solid;
-	border-bottom-width: 2px;
-	border-color: #cccccc;
+	border-bottom: 2px solid #cccccc;
 	text-align: center;
 	line-height: 70px;
-	font-family: Georgia;
+	font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
 a {
 	text-decoration: none;
+	color: #777777;
+}
+
+a:hover {
+	color: #cccccc;
 }
 
 a:visited {
@@ -28,34 +33,44 @@ section {
 	float: left;
 	background-color: #ffffff;
 	width: 650px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #cccccc;
-	margin: 30px 0;
+	border: 1px solid #cccccc;
+	margin: 30px 0 125px 0;
 	overflow: hidden;
+}
+
+p {
+    line-height: 1.5;
+    text-indent: 25px;
+}
+
+label {
+    line-height: 1.5;
+}
+
+input::placeholder,
+textarea::placeholder {
+    opacity: 0.5;
 }
 
 aside {
 	float: right;
 	background-color: #ffffff;
 	width: 270px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #cccccc;
-	margin: 30px 0px;
+	border: 1px solid #cccccc;
+	margin: 30px 0;
 }
 
 footer {
 	background-color: #666666;
 	clear: both;
 	width: 100%;
-	border-style: solid;
-	border-color: #4aaaa5;
-	border-top-width: 6px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	border-top: 6px solid #4aaaa5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
+
+/* Classes */
 
 .full-width {
 	width: 960px;
@@ -66,29 +81,25 @@ footer {
 	font-size: 22px;
 	color: #4aaaa5;
 	font-weight: bold;
-	font-family: Georgia;
+	font-family: 'Georgia', Times, Times New Roman, serif;
 	margin: 0 20px;
-	padding: 25px 0;
-	border-style: solid;
-	border-bottom-width: 2px;
-	border-color: #cccccc;
+	padding: 25px 0 23px 0;
+	border-bottom: 2px solid #cccccc;
 }
 
 .content-container {
 	margin: 20px;
-	line-height: 1.5;
+    overflow: hidden;
 }
 
 .sidebar-header {
 	font-size: 18px;
 	color: #4aaaa5;
 	font-weight: bold;
-	font-family: Georgia;
+	font-family: 'Georgia', Times, Times New Roman, serif;
 	margin: 0 15px;
 	padding: 15px 0;
-	border-style: solid;
-	border-bottom-width: 1px;
-	border-color: #cccccc;
+	border-bottom: 1px solid #cccccc;
 }
 
 .sidebar-container {
@@ -100,6 +111,78 @@ footer {
 	width: 33.33%;
 	float: left;
 }
+
+.contact-img:hover {
+    opacity: 0.8;
+}
+
+/* Portfolio Page Classes */
+
+.project-display-left {
+    margin: 15px 0;
+    width: 290px;
+    height: 200px;
+    float: left;
+}
+
+.project-display-right {
+    margin: 15px 0;
+    width: 290px;
+    height: 200px;
+    float: right;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+}
+
+.project-banner {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(74,170,165,0.8);
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    top: -70px;
+}
+
+/* Contact Page Classes */
+
+.input-spacer {
+    margin: 10px 0;
+}
+
+.text-input {
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: #777777;
+}
+
+.area-input {
+    width: 100%;
+    height: 170px;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: #777777;
+    border-color: #dddddd;
+}
+
+.submit-button {
+    width: 100px;
+    height: 35px;
+    color: #ffffff;
+    background-color: #4aaaa5;
+    font-size: 14px;
+    border: 0;
+}
+
+/* IDs */
 
 #header-name {
 	float: left;
@@ -122,7 +205,7 @@ footer {
 #headshot {
 	height: 172px;
 	width: 259px;
-	margin: 5px 20px 0px 0;
+	margin: 5px 20px 0 0;
 	float: left;
 }
 
